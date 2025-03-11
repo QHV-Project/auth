@@ -1,0 +1,24 @@
+server:
+  port: 2222  # Cổng chạy ứng dụng
+  servlet:
+    context-path: /${spring.application.name}/api  # Định nghĩa context path (URL gốc của API)
+
+spring:
+  application:
+    name: auth  # Tên ứng dụng
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: xiangquang
+    password: quanglv96
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update  # Tạo bảng nếu chưa có, không xóa dữ liệu
+    show-sql: true      # Hiển thị câu lệnh SQL trong console
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+
+  jackson:
+    serialization:
+      indent-output: true  # Format JSON đẹp hơn
+    default-property-inclusion: non_null  # Ẩn các giá trị null
