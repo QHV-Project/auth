@@ -7,7 +7,7 @@ spring:
   application:
     name: auth  # Tên ứng dụng
   datasource:
-    url: jdbc:mysql://localhost:3306/auth?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    url: ${sansan.host-data-source}/auth?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: xiangquang
     password: quanglv96
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -22,3 +22,6 @@ spring:
     serialization:
       indent-output: true  # Format JSON đẹp hơn
     default-property-inclusion: non_null  # Ẩn các giá trị null
+sansan:
+  time-session: 3600000
+  host-data-source: jdbc:mysql://localhost:3306
