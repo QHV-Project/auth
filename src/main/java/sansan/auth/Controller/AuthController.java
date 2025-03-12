@@ -8,13 +8,13 @@ import sansan.utility.lib.DTO.AuthDTO;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("/client-api/auth")
+@RequestMapping("/client-api")
 public class AuthController {
     @Resource
     private AuthService authService;
 
-    @PostMapping("/login")
-    public AuthDTO login(@RequestBody UserAuth userAuth) {
-        return authService.generalLogin(userAuth);
+    @PostMapping("/sansan")
+    public AuthDTO login(@RequestBody AuthDTO authDTO) {
+        return authService.generalLogin(authDTO);
     }
 }

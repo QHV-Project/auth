@@ -28,7 +28,7 @@ public class JdbcTemplateConfig {
     @Bean(name = "customer")
     public DataSource customerDataSource() {
         return DataSourceBuilder.create()
-                .url(data_source + "customer")
+                .url(data_source + "/customer")
                 .username(username)
                 .password(password)
                 .driverClassName("com.mysql.cj.jdbc.Driver")

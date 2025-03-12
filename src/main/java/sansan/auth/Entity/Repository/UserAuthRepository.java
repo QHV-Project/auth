@@ -7,4 +7,5 @@ import sansan.auth.Entity.UserAuth;
 
 @Repository
 public interface UserAuthRepository extends JpaRepository<UserAuth, String> {
+    UserAuth findByUsername(String username);
 }
