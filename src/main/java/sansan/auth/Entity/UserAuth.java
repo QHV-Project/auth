@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 public class UserAuth {
     @Id
     @JsonProperty("id")
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, length = 36)
     private String id;
 
     @JsonProperty("username")

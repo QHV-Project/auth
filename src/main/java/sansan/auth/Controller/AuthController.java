@@ -13,7 +13,7 @@ public class AuthController {
     @Resource
     private AuthService authService;
 
-    @PostMapping("/sansan")
+    @PostMapping("/login")
     public AuthDTO login(@RequestBody AuthDTO authDTO) {
         return authService.generalLogin(authDTO);
     }

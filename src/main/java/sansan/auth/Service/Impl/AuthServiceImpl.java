@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
-import sansan.auth.Config.JwtTokenProvider;
+import sansan.auth.Config.TokenProvider;
 import sansan.auth.Entity.Repository.UserAuthRepository;
 import sansan.auth.Entity.UserAuth;
 import sansan.auth.Service.AuthService;
@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @Service
 public class AuthServiceImpl implements AuthService {
     @Resource
-    private JwtTokenProvider jwtTokenProvider;
+    private TokenProvider jwtTokenProvider;
     @Resource
     private UserAuthRepository userAuthRepository;
 

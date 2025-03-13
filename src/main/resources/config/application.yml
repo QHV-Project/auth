@@ -26,5 +26,8 @@ logging:
       indent-output: true  # Format JSON đẹp hơn
     default-property-inclusion: non_null  # Ẩn các giá trị null
 sansan:
-  time-session: 3600000
+  nimbus:
+    secret: 308a61bac23acce28b3b7a401424cb4a22be484508c0f3b464847b3943ab533e # hash256
+    time-session: 3600000
+
   host-data-source: jdbc:mysql://localhost:3306
