@@ -13,22 +13,21 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "user_auth")
-public class UserAuth {
+@NoArgsConstructor
+@Table(name = "request_entity")
+public class RequestEntity {
     @Id
-    @JsonProperty("id")
-    @Column(name = "id", nullable = false, length = 36)
-    private String id;
-
-    @JsonProperty("username")
-    @Column(name = "username")
+    @JsonProperty("request_id")
+    @Column(name = "request_id", nullable = false)
+    private String requestId;
+    @JsonProperty("user_name")
+    @Column(name = "user_name")
     private String username;
 
-    @JsonProperty("password")
-    @Column(name = "password")
-    private String password;
+    @JsonProperty("request_type")
+    @Column(name = "request_type")
+    private String requestType;
 
     @JsonProperty("status")
     @Column(name = "status")

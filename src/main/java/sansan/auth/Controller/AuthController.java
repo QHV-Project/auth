@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.*;
 import sansan.auth.Service.AuthService;
 import sansan.auth.Entity.UserAuth;
 import sansan.utility.lib.DTO.AuthDTO;
+import sansan.utility.lib.DTO.LoginDTO;
 
 import javax.annotation.Resource;
 
@@ -14,7 +15,12 @@ public class AuthController {
     private AuthService authService;
 
     @PostMapping("/login")
-    public AuthDTO login(@RequestBody AuthDTO authDTO) {
+    public LoginDTO login(@RequestBody AuthDTO authDTO) {
         return authService.generalLogin(authDTO);
+    }
+
+    @PostMapping("/reset-pass")
+    public LoginDTO postResetPassword(@RequestBody AuthDTO authDTO) {
+        return authService.postResetPassword(authDTO);
     }
 }

@@ -4,6 +4,7 @@ import com.nimbusds.jwt.SignedJWT;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
+import sansan.utility.lib.Config.TokenProvider;
 import sansan.utility.lib.DTO.UserDTO;
 
 import javax.servlet.FilterChain;
